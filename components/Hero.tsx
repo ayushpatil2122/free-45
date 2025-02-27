@@ -4,11 +4,12 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Stars, PerspectiveCamera } from "@react-three/drei";
 import { useRef, Suspense, useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import * as THREE from "three" 
 
 function Stadium() {
   const { scene } = useGLTF("/cricket_stadium.glb");
-  const stadiumRef = useRef();
-
+  const stadiumRef = useRef<THREE.Object3D | null>(null);
+  
   useFrame(() => {
     if (stadiumRef.current) {
       stadiumRef.current.rotation.y += 0.002; 

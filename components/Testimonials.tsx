@@ -59,16 +59,13 @@ export default function Testimonials() {
   const handleDotClick = (index : any) => {
     setActiveTestimonial(index);
     setIsAutoplay(false);
-    // Resume autoplay after 10 seconds of inactivity
     setTimeout(() => setIsAutoplay(true), 10000);
   };
 
   return (
     <div className="relative bg-gray-900 text-white py-24 px-6 md:px-12 overflow-hidden">
-      {/* Enhanced background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 rounded-full filter blur-3xl opacity-10 -translate-y-1/2 translate-x-1/2"></div>
-        {/* <div className="absolute bottom-0 left-0 w-80 h-80 bg-yellow-600 rounded-full filter blur-3xl opacity-10 translate-y-1/2 -translate-x-1/2"></div> */}
         <div className="absolute top-1/3 left-1/4 w-48 h-48 bg-blue-500 rounded-full filter blur-3xl opacity-5"></div>
         <div className="absolute bottom-1/4 right-1/3 w-56 h-56 bg-indigo-500 rounded-full filter blur-3xl opacity-5"></div>
         <div className="hidden lg:block absolute top-20 right-40 w-16 h-2 bg-gradient-to-r from-yellow-600 to-yellow-700 rounded-full transform rotate-45 shadow-lg"></div>
@@ -86,14 +83,10 @@ export default function Testimonials() {
       </div>
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="relative">
-          {/* Featured testimonial */}
           <div className="relative mx-auto max-w-4xl border border-yellow-500/30 p-8 md:p-12 rounded-2xl shadow-2xl bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm overflow-hidden">
-            {/* Large quote icon */}
             <FaQuoteRight className="absolute top-8 right-8 text-6xl text-yellow-500/10" />
             
-            {/* Testimonial content */}
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-              {/* Avatar and info */}
               <div className="flex flex-col items-center">
                 <div className="w-24 h-24 rounded-full border-4 border-yellow-400/50 overflow-hidden shadow-lg">
                   <Image 
@@ -105,7 +98,6 @@ export default function Testimonials() {
                   />
                 </div>
                 
-                {/* Rating stars */}
                 <div className="mt-4 flex items-center">
                   {Array.from({ length: Math.floor(testimonials[activeTestimonial].rating) }).map((_, i) => (
                     <FaStar key={i} className="text-xl text-yellow-400" />
@@ -116,7 +108,6 @@ export default function Testimonials() {
                 </div>
               </div>
               
-              {/* Testimonial text */}
               <div className="flex-1 text-center md:text-left">
                 <p className="text-xl md:text-2xl italic text-gray-200 mb-6 leading-relaxed">
                   "{testimonials[activeTestimonial].text}"
@@ -131,13 +122,8 @@ export default function Testimonials() {
                 </div>
               </div>
             </div>
-            
-            {/* Decorative elements */}
-            {/* <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-yellow-400/5 rounded-full"></div>
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-yellow-400/5 rounded-full"></div> */}
           </div>
           
-          {/* Navigation dots */}
           <div className="flex justify-center mt-10 gap-3">
             {testimonials.map((_, index) => (
               <button
@@ -154,7 +140,6 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Additional testimonials (small preview) */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 opacity-60">
           {testimonials.slice(0, 3).map((testimonial, index) => (
             <div
@@ -180,7 +165,6 @@ export default function Testimonials() {
         </div>
       </div>
       
-      {/* Call to action */}
       <div className="mt-16 text-center relative z-10">
         <p className="inline-block px-6 py-3 bg-yellow-500/10 border border-yellow-500/30 rounded-full text-yellow-300 font-medium hover:bg-yellow-500/20 transition-all cursor-pointer">
           Join 10,000+ cricket fans making smarter predictions

@@ -11,18 +11,11 @@ export default function CricketInsights() {
 
   return (
     <div className="relative bg-gradient-to-b from-gray-900 via-indigo-950 to-gray-900 text-white py-24 px-6 md:px-12 overflow-hidden">
-      {/* Enhanced background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* <div className="absolute top-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-yellow-500 rounded-full filter blur-3xl opacity-10 -translate-y-1/2 translate-x-1/3"></div> */}
-        {/* <div className="absolute bottom-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-blue-600 rounded-full filter blur-3xl opacity-10 translate-y-1/3 -translate-x-1/3"></div> */}
         <div className="absolute top-1/2 left-1/2 w-48 md:w-80 h-48 md:h-80 bg-purple-600 rounded-full filter blur-3xl opacity-5 -translate-x-1/2 -translate-y-1/2"></div>
-        
-        {/* Cricket ball animation */}
         <div className="hidden md:block absolute top-20 right-20 w-6 h-6 bg-red-500 rounded-full animate-bounce shadow-lg"></div>
         <div className="hidden md:block absolute bottom-20 left-20 w-6 h-6 bg-red-500 rounded-full animate-bounce shadow-lg" style={{ animationDelay: "0.5s" }}></div>
       </div>
-
-      {/* Cricket bat icon decoration */}
       <div className="absolute top-10 left-10 opacity-10 hidden md:block">
         <svg width="80" height="80" viewBox="0 0 24 24" fill="white">
           <path d="M6.5,2C7.9,2 9,3.1 9,4.5C9,4.7 9,4.9 8.9,5.1L20.6,16.8L21.4,16L22.1,16.7L21.4,17.4L16.8,22L16.1,21.3L16.9,20.5L5.2,8.8C5,8.9 4.8,9 4.5,9C3.1,9 2,7.9 2,6.5C2,5.1 3.1,4 4.5,4C4.8,4 5,4 5.2,4.1L8.9,0.4L9.6,1.1L6.9,3.8C7.3,3.3 7.9,3 8.5,3C8.8,3 9,3 9.2,3.1L20.9,14.8L21.7,14L22.4,14.7L21.7,15.4L15.4,21.7L14.7,21L15.5,20.2L3.8,8.5C3.4,8.1 3.1,7.5 3.1,6.9L5.8,9.6L5.1,8.9L5.8,8.2" />
@@ -156,8 +149,6 @@ export default function CricketInsights() {
           </p>
         </motion.div>
       </div>
-      
-      {/* Call to action */}
       <motion.div 
         className="mt-16 text-center"
         initial={{ opacity: 0, y: 20 }}

@@ -85,18 +85,13 @@ export default function CricketPredictionsProcess() {
 
   return (
     <div ref={containerRef} className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white py-20 px-6 md:px-12 overflow-hidden">
-      {/* Enhanced background effects */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* <div className="absolute top-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-yellow-500 rounded-full filter blur-3xl opacity-10 -translate-y-1/2 translate-x-1/2"></div> */}
-        {/* <div className="absolute bottom-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-yellow-600 rounded-full filter blur-3xl opacity-10 translate-y-1/2 -translate-x-1/2"></div> */}
         <div className="absolute top-1/3 left-1/4 w-32 md:w-64 h-32 md:h-64 bg-blue-500 rounded-full filter blur-3xl opacity-5"></div>
         <div className="absolute bottom-1/4 right-1/3 w-40 md:w-72 h-40 md:h-72 bg-indigo-500 rounded-full filter blur-3xl opacity-5"></div>
         
-        {/* Cricket ball animation */}
         <div className="hidden lg:block absolute top-20 right-20 w-12 h-12 rounded-full bg-gradient-to-r from-red-600 to-red-700 shadow-lg animate-bounce"></div>
       </div>
 
-      {/* Main title with enhanced styling */}
       <div className="text-center mb-16 relative">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-200 bg-clip-text text-transparent drop-shadow-sm">
           Our Cricket Prediction Process
@@ -107,7 +102,6 @@ export default function CricketPredictionsProcess() {
         <div className="absolute w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-200 bottom-0 left-1/2 transform -translate-x-1/2 rounded-full"></div>
       </div>
 
-      {/* Content Container with Grid Layout */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
         {steps.map((step, index) => (
           <div 
@@ -128,7 +122,6 @@ export default function CricketPredictionsProcess() {
         ))}
       </div>
 
-      {/* Bottom decorative element */}
       <div className="mt-16 text-center">
         <div className="inline-block p-px bg-gradient-to-r from-transparent via-yellow-400 to-transparent w-24"></div>
         <p className="mt-8 text-gray-400 italic text-sm">Backed by expert analysis and years of cricket knowledge</p>

@@ -20,7 +20,6 @@ export default function Footer() {
   
   const handleSubmit = (e : any) => {
     e.preventDefault();
-    // Handle newsletter signup
     setEmail("");
     alert("Thanks for subscribing to our newsletter!");
   };
@@ -29,7 +28,6 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-gray-900  text-white pt-20 pb-8 px-6 md:px-12 overflow-hidden">
-      {/* Enhanced background effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 rounded-full filter blur-3xl opacity-10 -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-yellow-600 rounded-full filter blur-3xl opacity-10 translate-y-1/2 -translate-x-1/2"></div>
@@ -37,14 +35,10 @@ export default function Footer() {
         <div className="absolute bottom-1/4 right-1/3 w-56 h-56 bg-indigo-500 rounded-full filter blur-3xl opacity-5"></div>
       </div>
 
-      {/* Cricket ball animation */}
       <div className="hidden lg:block absolute top-20 right-20 w-10 h-10 rounded-full bg-gradient-to-r from-red-600 to-red-700 shadow-lg animate-bounce"></div>
 
-      {/* Main footer content */}
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Top section with logo and newsletter */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16 pb-16 border-b border-gray-700/50">
-          {/* Logo and description */}
           <div className="col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
@@ -79,7 +73,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick links */}
           <div className="col-span-1">
             <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">
               Quick Links
@@ -114,7 +107,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Newsletter signup */}
           <div className="col-span-1">
             <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">
               Subscribe to Our Newsletter
@@ -161,9 +153,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Middle section with cricket links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {/* IPL Teams */}
           <div>
             <h3 className="text-xl font-bold mb-6 flex items-center">
               <span className="bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">IPL 2025</span>

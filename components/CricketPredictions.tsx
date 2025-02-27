@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { FaMapMarkerAlt, FaCalendarAlt, FaTrophy, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -14,8 +13,6 @@ const matches = [
     stadium: "Harare Sports Club, Harare",
     league: "Ireland vs Zimbabwe",
     series: "3rd ODI",
-    flag1: "/flags/zimbabwe.png",
-    flag2: "/flags/ireland.png",
     odds1: 2.10,
     odds2: 1.75,
   },
@@ -27,8 +24,6 @@ const matches = [
     stadium: "Gaddafi Stadium, Lahore",
     league: "Champions Trophy",
     series: "Match 8",
-    flag1: "/flags/afghanistan.png",
-    flag2: "/flags/england.png",
     odds1: 3.25,
     odds2: 1.40,
   },
@@ -40,8 +35,6 @@ const matches = [
     stadium: "Dr. DY Patil Sports Academy, Mumbai",
     league: "International Masters League",
     series: "Match 04",
-    flag1: "/flags/sri-lanka.png",
-    flag2: "/flags/south-africa.png",
     odds1: 1.95,
     odds2: 1.85,
   },
@@ -79,18 +72,14 @@ export default function CricketPredictions() {
 
   return (
     <div className="relative bg-gray-900 text-white py-24 px-6 md:px-12 overflow-hidden">
-      {/* Enhanced background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-blue-600 rounded-full filter blur-3xl opacity-10 -translate-y-1/2 translate-x-1/3"></div>
-        {/* <div className="absolute bottom-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-yellow-500 rounded-full filter blur-3xl opacity-10 translate-y-1/3 -translate-x-1/3"></div> */}
         <div className="absolute top-1/2 left-1/2 w-48 md:w-80 h-48 md:h-80 bg-purple-600 rounded-full filter blur-3xl opacity-5 -translate-x-1/2 -translate-y-1/2"></div>
         
-        {/* Cricket ball animations */}
         <div className="hidden md:block absolute top-20 right-20 w-6 h-6 bg-red-500 rounded-full shadow-lg animate-ping opacity-40"></div>
         <div className="hidden md:block absolute bottom-20 left-20 w-6 h-6 bg-red-500 rounded-full shadow-lg animate-ping opacity-40" style={{ animationDuration: "3s", animationDelay: "1.5s" }}></div>
       </div>
 
-      {/* Cricket stumps decoration */}
       <div className="absolute top-10 right-10 opacity-10 hidden md:block">
         <svg width="100" height="100" viewBox="0 0 100 100" fill="white">
           <rect x="30" y="10" width="4" height="80" rx="2" />
@@ -159,13 +148,6 @@ export default function CricketPredictions() {
           >
             <div className="relative overflow-hidden rounded-2xl border-2 border-yellow-400/30 shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent z-10"></div>
-              <Image 
-                src="/predictionsman.png" 
-                alt="Cricket Prediction Expert" 
-                width={300} 
-                height={300} 
-                className="object-cover"
-              />
             </div>
           </motion.div>
         </motion.div>
@@ -227,12 +209,6 @@ export default function CricketPredictions() {
                 <div className="flex flex-col md:flex-row items-center justify-between">
                   <div className="flex flex-col items-center mb-6 md:mb-0">
                     <div className="w-20 h-20 relative mb-4 transform transition-transform duration-300 hover:scale-110">
-                      <Image 
-                        src={matches[index].flag1} 
-                        alt={matches[index].team1} 
-                        layout="fill" 
-                        className="rounded-full object-cover border-4 border-gray-700"
-                      />
                     </div>
                     <h4 className="text-2xl font-bold text-white mb-1">{matches[index].team1}</h4>
                     <span className="px-4 py-1 bg-gray-700 rounded-full text-yellow-400 font-medium">
@@ -252,12 +228,6 @@ export default function CricketPredictions() {
                   
                   <div className="flex flex-col items-center">
                     <div className="w-20 h-20 relative mb-4 transform transition-transform duration-300 hover:scale-110">
-                      <Image 
-                        src={matches[index].flag2} 
-                        alt={matches[index].team2} 
-                        layout="fill" 
-                        className="rounded-full object-cover border-4 border-gray-700"
-                      />
                     </div>
                     <h4 className="text-2xl font-bold text-white mb-1">{matches[index].team2}</h4>
                     <span className="px-4 py-1 bg-gray-700 rounded-full text-yellow-400 font-medium">
